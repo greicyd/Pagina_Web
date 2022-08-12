@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React from 'react'
 import Navigation from './components/Navigation'
-//import top10Visitadas from './components/Top10Visitadas'
+import Top10Visitadas from './components/Top10Visitadas'
 
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
@@ -13,10 +13,13 @@ function App() {
     <Router>
     <Navigation/>
     <Routes>
-    
+    <Route path="/top10Visitadas" element={<Top10Visitadas/>} />
      </Routes>
    </Router>
   );
 }
-
+export const backend = {
+  host: "http://localhost",
+  port: 8080
+}
 export default App;
