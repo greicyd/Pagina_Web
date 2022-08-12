@@ -1,8 +1,12 @@
+const cors = require('cors')
 const express = require('express');
 const server = express();
+
 server.set('port',8080);
 server.set('host','localhost');
 //Middlewares
+server.use(cors())
+
 server.use(express.json());
 server.use('/tiendas', require('./routes/stores.js'));
 
