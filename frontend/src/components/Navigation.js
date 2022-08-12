@@ -12,7 +12,7 @@ export default class Navigation extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link className="nav-link" aria-current="page" to="/top5Visitadas">Top 10 Visitadas</Link>
+            <Link className="nav-link" aria-current="page" to="/top10Visitadas">Top 10 Visitadas</Link>
             <Link className="nav-link" to="/top20Ventas">Top 20 Ventas</Link>
             <Link className="nav-link" to="/top5Area">Top 5 Area</Link>
 

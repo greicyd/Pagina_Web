@@ -1,9 +1,9 @@
 const storesControl = {};
 const db = require("./database.js");
 
-//Obtener las 5 tiendas mas visitadas
-storesControl.getTOP5Visitadas = (req, res) => {
-    db.query(" select Store_ID, Daily_Customer_Count from store order by Daily_Customer_Count DESC limit 0,5;", (err, result, fields) => {
+//Obtener las 10 tiendas mas visitadas
+storesControl.getTOP10Visitadas = (req, res) => {
+    db.query(" select Store_ID, Daily_Customer_Count from store order by Daily_Customer_Count DESC limit 0,10;", (err, result, fields) => {
         if (err) {
             res.status(500).send(err);
             console.log(err);
