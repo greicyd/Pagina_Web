@@ -10,7 +10,7 @@ export default class Top5Area extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div className='container' width='500'>
       <div>
         <CanvasJSChart options={this.options}
         /* onRef = {ref => this.chart = ref} */
@@ -28,7 +28,6 @@ export default class Top5Area extends Component {
       label: `${user.Store_ID}`
       , y: user.Store_Area
     }))
-    console.log("MAAAAAAAA",this.options)
   }
   async componentDidMount() {
     await this.getTOP5Area();
@@ -46,6 +45,12 @@ export default class Top5Area extends Component {
     this.options={
       title: {
         text: "Ranking 5 tiendas con mayor área"
+      },
+      axisY: {
+        title: "Area [yd^2]"
+      },
+      axisX: {
+        title: "ID Tienda "
       },
       data: [{
         type: "column",

@@ -9,10 +9,10 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export default class Top10Visitadas extends Component {
   render() {
     return (
-      <div class="container" id='tablas'>
+      <div className="container" id='tablas'>
         <h1 align="center"> Ranking 10 </h1>
 
-        <table class="table table-dark table-striped" id="top10Visitadas">
+        <table className="table table-dark table-striped" id="top10Visitadas">
           <thead>
             <tr>
               <th scope="col">Puesto</th>
@@ -23,9 +23,9 @@ export default class Top10Visitadas extends Component {
           <tbody>
 
             {
-              this.state.users.map(user => (
+              this.state.users.map((user,index) => (
                 <tr>
-                  <th scope="row"> i</th>
+                  <th scope="row"> {index+1}</th>
                   <td> {user.Store_ID}</td>
                   <td>{user.Daily_Customer_Count}</td>
                 </tr>
