@@ -45,14 +45,14 @@ export default class Top20Ventas extends Component {
   
     this.options={
       title: {
-        text: "Ranking 20 ventas"
+        text: "Ranking 20 tiendas con mayores ventas"
       },
       axisX: {
-				title: "Tiendas",
+				title: "Tienda ID",
 				reversed: true,
 			},
 			axisY: {
-				title: "Ventas",
+				title: "Ventas [US $]",
 
 			},
       data: [{
