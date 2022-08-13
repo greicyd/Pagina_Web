@@ -1,30 +1,49 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import { backend } from '../App'
+import './Ventanas.css';
 
 export default class Top10Visitadas extends Component {
   render() {
     return (
-<div className="row mx-3">
-        <div className="col-md-8">
-          <ul className="list-group">
+
+      <div class="container">
+        <h1 align="center"> Ranking 10 </h1>
+
+        <table class="table table-dark table-striped" id="top10Visitadas">
+          <thead>
+            <tr>
+              <th scope="col">Puesto</th>
+              <th scope="col">Tienda ID</th>
+              <th scope="col">Promedio de visitas al mes</th>
+            </tr>
+          </thead>
+          <tbody>
+
             {
               this.state.users.map(user => (
-                <li className="list-group-item list-group-item-action"  >
-                  {user.Store_ID + " " + user.Daily_Customer_Count}
-                </li>)
+                <tr>
+                  <th scope="row"> i</th>
+                  <td> {user.Store_ID}</td>
+                  <td>{user.Daily_Customer_Count}</td>
+                </tr>
               )
+              )
+
             }
-          </ul>
-        </div>
+
+          </tbody>
+        </table>
       </div>
+
     )
-      
+
+
   }
   state = {
     users: [],
     Store_ID: '',
-    Daily_Customer_Count:'',
+    Daily_Customer_Count: '',
 
   }
   async getTOP10Visitadas() {
