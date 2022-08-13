@@ -1,13 +1,15 @@
+import CanvasJSReact from '../canvasjs.react';
 import React, { Component } from 'react'
 import axios from "axios"
 import { backend } from '../App'
 import './Ventanas.css';
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default class Top10Visitadas extends Component {
   render() {
     return (
-
-      <div class="container">
+      <div class="container" id='tablas'>
         <h1 align="center"> Ranking 10 </h1>
 
         <table class="table table-dark table-striped" id="top10Visitadas">

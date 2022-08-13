@@ -1,6 +1,12 @@
 .container{
     vertical-align: bottom;
+    padding: 1rem 3rem; 
+    border-color: #69bcec;
+    border-width: 5px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
 }
-.h1{
-    color: aquamarine;
+
+#tablas{
+height: 100%;
+justify-self: middle;
 }
